@@ -44,7 +44,7 @@ class _Process1ScreenState extends State<Process1Screen> {
                               'assets/images/ic_empty_circle.png'),
                           Image.asset(
                               width: 50,
-                              height:,
+                              height:50,
                               progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_75_circle.png'),
                         ],
                       ),
