@@ -1,45 +1,28 @@
+import 'package:exampel3/Helper.dart';
+import 'package:exampel3/helper2.dart';
+import 'package:exampel3/process/Process4.dart';
 import 'package:exampel3/process/Procress1.dart';
 import 'package:flutter/material.dart';
 
-import 'Widgets/CustomButton.dart';
-import 'Widgets/CustomTextField.dart';
-
-class HomeScreen extends StatefulWidget {
-  static const routeName = "/HomeScreen";
-
-  const HomeScreen({Key? key}) : super(key: key);
+import '../Widgets/CustomButton.dart';
+class Process3Screen extends StatefulWidget {
+  static const routeName = "/Process3Screen";
+  const Process3Screen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Process3Screen> createState() => _Process3ScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-  TextEditingController _controller_city = TextEditingController();
-
-  List<String> cities_all=['Lahore,Islamabad,Karachi'];
-  List<String> cities_searched=[];
+class _Process3ScreenState extends State<Process3Screen> {
   bool progressNext=false;
-
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _controller_city.addListener(() {
-      print('................${_controller_city.text.toString()}');
-      searchCity(_controller_city.text.toString().trim());
-    });
-  }
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     var _hight = mediaQueryData.size.height;
     var _width = mediaQueryData.size.width;
-
-
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             children: [
@@ -59,8 +42,12 @@ class _HomeScreenState extends State<HomeScreen> {
                               'assets/images/ic_empty_circle.png'),
                           Image.asset(
                               width: 50,
-                              height: progressNext? 25:50,
-                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_empty_circle.png'),
+                              height:50,
+                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_75_circle.png'),
+                          Image.asset(
+                              width: 50,
+                              height:50,
+                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_tik_with-back.png'),
                         ],
                       ),
                       const Text(
@@ -88,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Image.asset(
                           width: 50,
                           height: 50,
-                          'assets/images/ic_empty_circle.png'),
+                          'assets/images/ic_75_circle.png'),
                       const Text(
                         'TimeLine',
                         style: TextStyle(
@@ -150,13 +137,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
+
+              SizedBox(height: _width*0.01,),
               Container(
                 margin: const EdgeInsets.only(top: 50),
                 width: _width * 0.9,
                 child: Row(
                   children: const [
                     Text(
-                      'Where are you looking to buy?',
+                      'Do you currently own a home?',
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
@@ -165,37 +154,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 50,
-              ),
-              CustomTextField(_width * 0.95, 'Enter city or zipe Code',
-                  TextInputType.text, _controller_city),
+              // //Helper.getHomeCard(_width*0.80, 'What are your plans for the house?'),
+              // SizedBox(height: _width*0.01,),
+              SizedBox(height: _width*0.06,),
+              Helper2.getHomeCard(_width*0.95, 'Yes, I Currently own a home'),
+              SizedBox(height: _width*0.01,),
+              CustomButton('No, I am  Currently renting', _width * 0.95, () {
 
-            ],
-          ),
-          Expanded(
-            child: cities_searched.isNotEmpty?
-            ListView.builder(
-              itemCount: cities_searched.length,
-              itemBuilder: (ctx, index) {
-                return SizedBox(
-                  width: _width*0.7,
-                  //height: 50,
-                  child: Row(
-                    children: [
-                      const Icon(Icons.location_on_outlined,size: 25,),
-                      Text(cities_searched[index],style: const TextStyle(fontWeight: FontWeight.w200,fontSize: 14,color: Colors.black),)
-                    ],
-                  ),
-                );
-              },
-            ):Container(),
-          ),
-          Column(
-            children: [
-              CustomButton('Next', _width * 0.95, () {
-                Navigator.pushNamed(context, Process1Screen.routeName);
+                Navigator.pushNamed(context, Process4Screen.routeName);
               }),
+              SizedBox(height: _width*0.01,),
+              Helper2.getHomeCard(_width*0.95, 'No,I have other  living arrangements'),
+
+
+
+
               Container(
                 width: _width * 0.95,
                 child: TextButton(
@@ -217,24 +190,6 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-
-
-
     );
-  }
-
-
-  void searchCity(String trim) {
-    cities_searched.clear();
-     for(int i=0;i<cities_all.length;i++){
-      if(cities_all[i].toLowerCase().contains(trim.toLowerCase())){
-        cities_searched.add(cities_all[i]);
-      }
-     }
-     print('kkkkkkkkkkkkkk${cities_searched.length}');
-    progressNext=true;
-     setState(() {
-
-     });
   }
 }

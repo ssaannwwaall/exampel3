@@ -1,8 +1,13 @@
+import 'dart:ffi';
+
+import 'package:exampel3/HomeScreen.dart';
+import 'package:exampel3/process/Process2.dart';
 import 'package:flutter/material.dart';
 
 import '../Helper.dart';
 import '../Widgets/CustomButton.dart';
 import '../Widgets/CustomTextField.dart';
+import '../helper2.dart';
 
 class Process1Screen extends StatefulWidget {
   static const routeName = "/Process1Screen";
@@ -14,7 +19,8 @@ class Process1Screen extends StatefulWidget {
 }
 
 class _Process1ScreenState extends State<Process1Screen> {
-  TextEditingController _controller_email = TextEditingController();
+  // TextEditingController _location = TextEditingController();
+  // TextEditingController _controller_email = TextEditingController();
   bool progressNext=false;
   @override
   Widget build(BuildContext context) {
@@ -46,6 +52,10 @@ class _Process1ScreenState extends State<Process1Screen> {
                               width: 50,
                               height:50,
                               progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_75_circle.png'),
+                          Image.asset(
+                              width: 50,
+                              height:50,
+                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_100_circle.png'),
                         ],
                       ),
                       const Text(
@@ -135,9 +145,37 @@ class _Process1ScreenState extends State<Process1Screen> {
                   ),
                 ],
               ),
+
               SizedBox(height: _width*0.01,),
-              Helper.getHomeCard(_width*0.80, 'What are your plans for the house?'),
+              Container(
+                margin: const EdgeInsets.only(top: 50),
+                width: _width * 0.9,
+                child: Row(
+                  children: const [
+                    Text(
+                      'Where are your plans for the house?',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
+                    ),
+                  ],
+                ),
+              ),
+              // //Helper.getHomeCard(_width*0.80, 'What are your plans for the house?'),
+              // SizedBox(height: _width*0.01,),
+              SizedBox(height: _width*0.06,),
+              CustomButton('Primary Residence', _width * 0.95, () {
+
+                Navigator.pushNamed(context, Process2Screen.routeName);
+              }),
               SizedBox(height: _width*0.01,),
+              Helper2.getHomeCard(_width*0.95, 'Vacation Property'),
+              SizedBox(height: _width*0.01,),
+              Helper2.getHomeCard(_width*0.95, 'Investment  Property'),
+
+
+
               Container(
                 width: _width * 0.95,
                 child: TextButton(

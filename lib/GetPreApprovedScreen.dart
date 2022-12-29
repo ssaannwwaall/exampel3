@@ -11,7 +11,7 @@ class GetPreApprovedScreen extends StatefulWidget {
 
 class _GetPreApprovedScreenState extends State<GetPreApprovedScreen>  with SingleTickerProviderStateMixin{
   TabController? _tabController;
-
+  int _selectedIndex = 1;
   @override
   void initState() {
     // TODO: implement initState
@@ -102,7 +102,34 @@ class _GetPreApprovedScreenState extends State<GetPreApprovedScreen>  with Singl
           ),
         ],
       ),
+
       ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.dashboard),
+              label: 'Dashboard',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.request_quote_outlined),
+              label: 'Loan Request',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.chat),
+              label: 'Transaction',
+            ),
+
+
+          ],
+          currentIndex: _selectedIndex, //New
+          onTap: _onItemTapped,
+        )
     );
   }
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 }
+
