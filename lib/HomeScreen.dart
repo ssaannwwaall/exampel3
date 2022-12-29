@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(
@@ -99,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(
@@ -125,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(

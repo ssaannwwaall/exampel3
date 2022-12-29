@@ -20,7 +20,7 @@ class _Process2ScreenState extends State<Process2Screen> {
     var _hight = mediaQueryData.size.height;
     var _width = mediaQueryData.size.width;
     return Scaffold(
-      body: Column(
+      body: ListView(
         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
@@ -38,15 +38,12 @@ class _Process2ScreenState extends State<Process2Screen> {
                           Image.asset(
                               width: 50,
                               height: 50,
-                              'assets/images/ic_empty_circle.png'),
-                          Image.asset(
+                              'assets/images/ic_fill_circle.png'),
+                            Image.asset(
                               width: 50,
                               height:50,
-                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_75_circle.png'),
-                          Image.asset(
-                              width: 50,
-                              height:50,
-                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_tik_with-back.png'),
+                              'assets/images/ic_tik.png')
+                              //progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_tik_with-back.png'),
                         ],
                       ),
                       const Text(
@@ -59,9 +56,9 @@ class _Process2ScreenState extends State<Process2Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
-                          'assets/images/ic_line.png'),
+                          'assets/images/ic_line_filled.png'),
                       const Text(
                         '',
                         style: TextStyle(
@@ -71,10 +68,18 @@ class _Process2ScreenState extends State<Process2Screen> {
                   ),
                   Column(
                     children: [
-                      Image.asset(
-                          width: 50,
-                          height: 50,
-                          'assets/images/ic_topfill_circle.png'),
+                      Stack(
+                        children: [
+                          Image.asset(
+                              width: 50,
+                              height: 50,
+                              'assets/images/ic_empty_circle.png'),
+                          Image.asset(
+                              width: 50,
+                              height: 25,
+                              'assets/images/ic_topfill_circle.png'),
+                        ],
+                      ),
                       const Text(
                         'TimeLine',
                         style: TextStyle(
@@ -85,7 +90,7 @@ class _Process2ScreenState extends State<Process2Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(
@@ -111,7 +116,7 @@ class _Process2ScreenState extends State<Process2Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(
@@ -187,9 +192,7 @@ class _Process2ScreenState extends State<Process2Screen> {
               ),
             ],
           ),
-          SizedBox(
-            height: 50,
-          )
+
         ],
       ),
     );

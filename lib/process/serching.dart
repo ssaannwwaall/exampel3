@@ -23,7 +23,7 @@ class _SerchingState extends State<Serching> {
     var _hight = mediaQueryData.size.height;
     var _width = mediaQueryData.size.width;
     return Scaffold(
-      body: Column(
+      body: ListView(
         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
@@ -98,9 +98,6 @@ class _SerchingState extends State<Serching> {
               ),
             ],
           ),
-          SizedBox(
-            height: 50,
-          )
         ],
       ),
     );

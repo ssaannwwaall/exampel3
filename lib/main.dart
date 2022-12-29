@@ -20,9 +20,15 @@ import 'HomeScreen.dart';
 void main() {
   runApp(const MyApp());
 }
-
+//top half filled
+// Image.asset(
+//                               width: 50,
+//                               height: progressNext? 25:50,
+//                               progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_empty_circle.png'),
+//
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
 
   // This widget is the root of your application.
   @override

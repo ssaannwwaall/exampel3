@@ -68,7 +68,7 @@ class _Process1ScreenState extends State<Process1Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(
@@ -94,7 +94,7 @@ class _Process1ScreenState extends State<Process1Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(
@@ -120,7 +120,7 @@ class _Process1ScreenState extends State<Process1Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(
@@ -166,7 +166,6 @@ class _Process1ScreenState extends State<Process1Screen> {
               // SizedBox(height: _width*0.01,),
               SizedBox(height: _width*0.06,),
               CustomButton('Primary Residence', _width * 0.95, () {
-
                 Navigator.pushNamed(context, Process2Screen.routeName);
               }),
               SizedBox(height: _width*0.01,),

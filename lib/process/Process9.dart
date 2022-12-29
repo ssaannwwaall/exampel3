@@ -40,15 +40,12 @@ class _Process9ScreenState extends State<Process9Screen> {
                           Image.asset(
                               width: 50,
                               height: 50,
-                              'assets/images/ic_empty_circle.png'),
+                              'assets/images/ic_fill_circle.png'),
                           Image.asset(
                               width: 50,
                               height:50,
-                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_75_circle.png'),
-                          Image.asset(
-                              width: 50,
-                              height:50,
-                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_tik_with-back.png'),
+                              'assets/images/ic_tik.png')
+                          //progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_tik_with-back.png'),
                         ],
                       ),
                       const Text(
@@ -61,9 +58,9 @@ class _Process9ScreenState extends State<Process9Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
-                          'assets/images/ic_line.png'),
+                          'assets/images/ic_line_filled.png'),
                       const Text(
                         '',
                         style: TextStyle(
@@ -73,10 +70,19 @@ class _Process9ScreenState extends State<Process9Screen> {
                   ),
                   Column(
                     children: [
-                      Image.asset(
-                          width: 50,
-                          height: 50,
-                          'assets/images/ic_topfill_circle.png'),
+                      Stack(
+                        children: [
+                          Image.asset(
+                              width: 50,
+                              height: 50,
+                              'assets/images/ic_fill_circle.png'),
+                          Image.asset(
+                              width: 50,
+                              height:50,
+                              'assets/images/ic_tik.png')
+                          //progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_tik_with-back.png'),
+                        ],
+                      ),
                       const Text(
                         'TimeLine',
                         style: TextStyle(
@@ -87,9 +93,9 @@ class _Process9ScreenState extends State<Process9Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
-                          'assets/images/ic_line.png'),
+                          'assets/images/ic_line_filled.png'),
                       const Text(
                         '',
                         style: TextStyle(
@@ -99,10 +105,19 @@ class _Process9ScreenState extends State<Process9Screen> {
                   ),
                   Column(
                     children: [
-                      Image.asset(
-                          width: 50,
-                          height: 50,
-                          'assets/images/ic_empty_circle.png'),
+                      Stack(
+                        children: [
+                          Image.asset(
+                              width: 50,
+                              height: 50,
+                              'assets/images/ic_fill_circle.png'),
+                          Image.asset(
+                              width: 50,
+                              height:50,
+                              'assets/images/ic_tik.png')
+                          //progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_tik_with-back.png'),
+                        ],
+                      ),
                       const Text(
                         'Details',
                         style: TextStyle(
@@ -113,9 +128,9 @@ class _Process9ScreenState extends State<Process9Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
-                          'assets/images/ic_line.png'),
+                          'assets/images/ic_line_filled.png'),
                       const Text(
                         '',
                         style: TextStyle(
@@ -125,10 +140,18 @@ class _Process9ScreenState extends State<Process9Screen> {
                   ),
                   Column(
                     children: [
-                      Image.asset(
-                          width: 50,
-                          height: 50,
-                          'assets/images/ic_empty_circle.png'),
+                      Stack(
+                        children: [
+                          Image.asset(
+                              width: 50,
+                              height: 50,
+                              'assets/images/ic_empty_circle.png'),
+                          Image.asset(
+                              width: 50,
+                              height:25,
+                              'assets/images/ic_topfill_circle.png'),
+                        ],
+                      ),
                       const Text(
                         'Finish',
                         style: TextStyle(

@@ -44,9 +44,9 @@ class _ImageUploadState extends State<ImageUpload> {
               height: MediaQuery.of(context).size.height / 6,
               child: Column(
                 children: [
-                  ElevatedButton(
+                  InkWell(
                     //if user click this button, user can upload image from gallery
-                    onPressed: () {
+                    onTap: () {
                       Navigator.pop(context);
                       getImage(ImageSource.gallery);
                     },
@@ -57,9 +57,9 @@ class _ImageUploadState extends State<ImageUpload> {
                       ],
                     ),
                   ),
-                  ElevatedButton(
+                  InkWell(
                     //if user click this button. user can upload image from camera
-                    onPressed: () {
+                    onTap: () {
                       Navigator.pop(context);
                       getImage(ImageSource.camera);
                     },
@@ -130,23 +130,24 @@ class _ImageUploadState extends State<ImageUpload> {
                    ],
                  ),
                ),
-               ElevatedButton(
-                 onPressed: () {
+               InkWell(
+                 onTap: () {
                    myAlert();
                  },
                  child: Container(
                    height: 100,
                    width: 400,
-                   color: Colors.blue,
+                   decoration: BoxDecoration(
+                     color: Colors.white,
+                     borderRadius: const BorderRadius.all(Radius.circular(10)),
+                     border: Border.all(color: Colors.grey)
+                   ),
                    child: Padding(
                      padding: const EdgeInsets.only(top: 30),
                      child: Column(
-                       children: const [
-                         Icon(Icons.add_alarm_sharp,
-                             size: 25,
-                             color: Colors.white
-                         ),
-                         Center(child: Text('Upload Vaild Id'))
+                       children:  [
+                         Image.asset('assets/images/ic_add.png'),
+                         const Center(child: Text('Upload Vaild Id',style: TextStyle(color: Colors.blue),))
 
                        ],
                      ),
@@ -167,23 +168,24 @@ class _ImageUploadState extends State<ImageUpload> {
                    ],
                  ),
                ),
-               ElevatedButton(
-                 onPressed: () {
+               InkWell(
+                 onTap: () {
                    myAlert();
                  },
                  child: Container(
                    height: 100,
                    width: 400,
-                   color: Colors.blue,
+                   decoration: BoxDecoration(
+                       color: Colors.white,
+                       borderRadius: const BorderRadius.all(Radius.circular(10)),
+                       border: Border.all(color: Colors.grey)
+                   ),
                    child: Padding(
                      padding: const EdgeInsets.only(top: 30),
                      child: Column(
-                       children: const [
-                         Icon(Icons.add_alarm_sharp,
-                             size: 25,
-                             color: Colors.white
-                         ),
-                         Center(child: Text('Upload Purchase and Sales Agreement'))
+                       children:  [
+                         Image.asset('assets/images/ic_add.png'),
+                        const Center(child: Text('Upload Purchase and Sales Agreement',style: TextStyle(color: Colors.blue),))
                        ],
                      ),
                    ),
@@ -201,23 +203,24 @@ class _ImageUploadState extends State<ImageUpload> {
                    ],
                  ),
                ),
-               ElevatedButton(
-                 onPressed: () {
+               InkWell(
+                 onTap: () {
                    myAlert();
                  },
                  child: Container(
                    height: 100,
                    width: 400,
-                   color: Colors.blue,
+                   decoration: BoxDecoration(
+                     color: Colors.white,
+                     borderRadius: const BorderRadius.all(Radius.circular(10)),
+                     border: Border.all(color: Colors.grey)
+                   ),
                    child: Padding(
                      padding: const EdgeInsets.only(top: 30),
                      child: Column(
-                       children: const [
-                         Icon(Icons.add_alarm_sharp,
-                             size: 25,
-                             color: Colors.white
-                         ),
-                         Center(child: Text('Upload Down Payment proof'))
+                       children:  [
+                         Image.asset('assets/images/ic_add.png'),
+                        const Center(child: Text('Upload Down Payment proof',style: TextStyle(color: Colors.blue),))
                        ],
                      ),
                    ),
@@ -235,23 +238,24 @@ class _ImageUploadState extends State<ImageUpload> {
                    ],
                  ),
                ),
-               ElevatedButton(
-                 onPressed: () {
+               InkWell(
+                 onTap: () {
                    myAlert();
                  },
                  child: Container(
                    height: 100,
                    width: 400,
-                   color: Colors.blue,
+                   decoration: BoxDecoration(
+                     color: Colors.white,
+                     borderRadius: const BorderRadius.all(Radius.circular(10)),
+                     border: Border.all(color: Colors.grey)
+                   ),
                    child: Padding(
                      padding: const EdgeInsets.only(top: 30),
                      child: Column(
-                       children: const [
-                         Icon(Icons.add_alarm_sharp,
-                             size: 25,
-                             color: Colors.white
-                         ),
-                         Center(child: Text('Upload Income documents'))
+                       children: [
+                         Image.asset('assets/images/ic_add.png'),
+                         Center(child: Text('Upload Income documents',style: TextStyle(color: Colors.blue),))
                        ],
                      ),
                    ),
@@ -269,23 +273,24 @@ class _ImageUploadState extends State<ImageUpload> {
                    ],
                  ),
                ),
-               ElevatedButton(
-                 onPressed: () {
+               InkWell(
+                 onTap: () {
                    myAlert();
                  },
                  child: Container(
                    height: 100,
                    width: 400,
-                   color: Colors.blue,
+                   decoration: BoxDecoration(
+                     color: Colors.white,
+                     borderRadius: const BorderRadius.all(Radius.circular(10)),
+                     border: Border.all(color: Colors.grey)
+                   ),
                    child: Padding(
                      padding: const EdgeInsets.only(top: 30),
                      child: Column(
-                       children: const [
-                         Icon(Icons.add_alarm_sharp,
-                             size: 25,
-                             color: Colors.white
-                         ),
-                         Center(child: Text('upload Bank Statements'))
+                       children:  [
+                         Image.asset('assets/images/ic_add.png'),
+                         const Center(child: Text('upload Bank Statements',style: TextStyle(color: Colors.blue),))
                        ],
                      ),
                    ),

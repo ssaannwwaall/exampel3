@@ -40,15 +40,12 @@ class _Process4ScreenState extends State<Process4Screen> {
                           Image.asset(
                               width: 50,
                               height: 50,
-                              'assets/images/ic_empty_circle.png'),
+                              'assets/images/ic_fill_circle.png'),
                           Image.asset(
                               width: 50,
                               height:50,
-                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_75_circle.png'),
-                          Image.asset(
-                              width: 50,
-                              height:50,
-                              progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_tik_with-back.png'),
+                              'assets/images/ic_tik.png')
+                          //progressNext? 'assets/images/ic_topfill_circle.png':'assets/images/ic_tik_with-back.png'),
                         ],
                       ),
                       const Text(
@@ -61,9 +58,9 @@ class _Process4ScreenState extends State<Process4Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
-                          'assets/images/ic_line.png'),
+                          'assets/images/ic_line_filled.png'),
                       const Text(
                         '',
                         style: TextStyle(
@@ -87,7 +84,7 @@ class _Process4ScreenState extends State<Process4Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(
@@ -113,7 +110,7 @@ class _Process4ScreenState extends State<Process4Screen> {
                   Column(
                     children: [
                       Image.asset(
-                          width: _width * 0.15,
+                          width: _width * 0.1,
                           height: 50,
                           'assets/images/ic_line.png'),
                       const Text(
